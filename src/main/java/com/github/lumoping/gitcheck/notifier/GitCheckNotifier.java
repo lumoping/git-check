@@ -1,4 +1,4 @@
-package com.github.lumoping.gitcheck.prePush;
+package com.github.lumoping.gitcheck.notifier;
 
 import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationGroupManager;

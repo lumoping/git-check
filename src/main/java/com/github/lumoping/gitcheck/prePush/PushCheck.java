@@ -1,5 +1,6 @@
 package com.github.lumoping.gitcheck.prePush;
 
+import com.github.lumoping.gitcheck.notifier.GitCheckNotifier;
 import com.intellij.dvcs.push.PrePushHandler;
 import com.intellij.dvcs.push.PushInfo;
 import com.intellij.openapi.progress.ProgressIndicator;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class GitCheck implements PrePushHandler {
+public class PushCheck implements PrePushHandler {
 
     @Override
     public @NotNull @Nls(capitalization = Nls.Capitalization.Title) String getPresentableName() {
