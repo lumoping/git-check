@@ -1,18 +1,13 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.lumoping.gitcheck</id>
-    <name>git-check</name>
+    <name>Git-Check</name>
     <vendor>lumoping</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.lumoping.gitcheck.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.lumoping.gitcheck.services.MyProjectService"/>
+        <prePushHandler implementation="com.github.lumoping.gitcheck.prePush.GitCheck"/>
+        <notificationGroup id="git-check" displayType="STICKY_BALLOON" bundle="messages.MyBundle" key="gitcheck"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.lumoping.gitcheck.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
